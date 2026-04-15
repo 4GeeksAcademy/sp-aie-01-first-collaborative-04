@@ -36,7 +36,7 @@
     <header class="sticky top-0 z-30 border-b border-[var(--border-soft)] bg-[var(--bg-cream)]/95 backdrop-blur">
       <nav class="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-8" aria-label="Primary">
         <div class="flex flex-wrap items-center gap-3 sm:gap-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center">
-          <a href="#" class="font-display text-xl tracking-[0.18em] text-[var(--text-charcoal)] sm:text-2xl">
+          <a href="index.html" class="font-display text-xl tracking-[0.18em] text-[var(--text-charcoal)] sm:text-2xl">
             MAISON ROSE
           </a>
 
@@ -81,14 +81,25 @@
     </header>
 
     <main class="mx-auto w-full max-w-7xl flex-1 px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-1.5 text-sm text-[var(--text-charcoal)]/60">
+          <li><a href="index.html" class="transition hover:text-[var(--accent-secondary)]">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="font-medium text-[var(--text-charcoal)]/80" aria-current="page">Your Cart</li>
+        </ol>
+      </nav>
+
       <div class="mb-8">
         <h1 class="font-display text-3xl text-[var(--text-charcoal)] sm:text-4xl">Your Cart</h1>
         <p class="mt-2 text-sm text-[var(--text-charcoal)]/65">3 items in your bag</p>
+        <p class="mt-2 text-sm text-[var(--text-charcoal)]/60">
+          <a href="catalog.html" class="transition hover:text-[var(--accent-secondary)]">&larr; Continue Shopping</a>
+        </p>
       </div>
 
       <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_25rem] lg:items-start">
         <section aria-label="Cart products" class="space-y-4">
-          <article class="relative rounded-xl border border-[var(--border-soft)] bg-white p-4 shadow-[0_8px_24px_rgba(45,45,45,0.05)] sm:p-5">
+          <article aria-label="Ros&eacute; Silk Wrap Blouse - cart item" class="relative rounded-xl border border-[var(--border-soft)] bg-white p-4 shadow-[0_8px_24px_rgba(45,45,45,0.05)] sm:p-5">
             <button
               type="button"
               aria-label="Remove Ros&eacute; Silk Wrap Blouse"
@@ -126,7 +137,7 @@
             </div>
           </article>
 
-          <article class="relative rounded-xl border border-[var(--border-soft)] bg-white p-4 shadow-[0_8px_24px_rgba(45,45,45,0.05)] sm:p-5">
+          <article aria-label="Camel Wool Overcoat - cart item" class="relative rounded-xl border border-[var(--border-soft)] bg-white p-4 shadow-[0_8px_24px_rgba(45,45,45,0.05)] sm:p-5">
             <button
               type="button"
               aria-label="Remove Camel Wool Overcoat"
@@ -164,7 +175,7 @@
             </div>
           </article>
 
-          <article class="relative rounded-xl border border-[var(--border-soft)] bg-white p-4 shadow-[0_8px_24px_rgba(45,45,45,0.05)] sm:p-5">
+          <article aria-label="Ivory Linen Trousers - cart item" class="relative rounded-xl border border-[var(--border-soft)] bg-white p-4 shadow-[0_8px_24px_rgba(45,45,45,0.05)] sm:p-5">
             <button
               type="button"
               aria-label="Remove Ivory Linen Trousers"
