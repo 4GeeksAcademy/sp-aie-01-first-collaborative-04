@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Catálogo de ropa de Luna Atelier" />
+  <title>Catálogo | Luna Atelier</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: {
+              50: "#fff7fa",
+              100: "#ffeef4",
+              200: "#ffd7e6",
+              300: "#f5b9cf",
+              400: "#eb9db7",
+              500: "#df7f9f",
+              700: "#9f4f69"
+            }
+          },
+          boxShadow: {
+            soft: "0 10px 30px -16px rgba(76, 32, 51, 0.25)"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-blush-50 text-stone-700 min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header class="border-b border-blush-200 bg-white">
+  <div class="max-w-7xl mx-auto px-4 py-4">
+
+    <div class="flex flex-col md:flex-row md:justify-between gap-4">
+
+      <!-- LOGO -->
+      <a href="../index.html" class="text-2xl tracking-widest text-blush-700">
+        LUNA ATELIER
+      </a>
+
+      <!-- SEARCH -->
+      <input type="search" placeholder="Buscar..."
+        class="w-full md:max-w-md border rounded-full px-4 py-2">
+
+      <!-- CUENTA -->
+      <a href="../checkout.html" class="border px-4 py-2 rounded-full">
+        Mi cuenta
+      </a>
+
+    </div>
+
+    <!-- NAV -->
+    <nav class="mt-4">
+      <ul class="flex gap-3">
+        <li><a href="../index.html" class="px-4 py-2 hover:bg-blush-100 rounded-full">Home</a></li>
+        <li><a href="catalogo.html" class="px-4 py-2 bg-blush-100 rounded-full">Catalog</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<!-- MAIN -->
+<!-- ...existing code... -->
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="max-w-7xl mx-auto px-4 py-10">
+  <div class="flex flex-col gap-6">
+
+    <div>
+      <h1 class="text-3xl font-semibold">Catálogo</h1>
+      <p class="text-stone-600">Explora nuestra selección de moda femenina minimalista.</p>
+    </div>
+
+    <!-- BARRA DE FILTROS -->
+    <section class="bg-white border border-blush-200 rounded-2xl p-4 shadow-soft">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+        <div>
+          <label for="categoria" class="block text-sm mb-2">Categoría</label>
+          <select id="categoria" class="w-full border rounded-xl px-3 py-2">
+            <option>Todas</option>
+            <option>Vestidos</option>
+            <option>Blusas</option>
+            <option>Pantalones</option>
+            <option>Accesorios</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="talla" class="block text-sm mb-2">Talla</label>
+          <select id="talla" class="w-full border rounded-xl px-3 py-2">
+            <option>Todas</option>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+        </div>
+
+        <button class="bg-blush-700 text-white rounded-xl px-4 py-2 hover:bg-blush-500">
+          Aplicar filtros
+        </button>
+      </div>
+    </section>
+
+    <!-- LISTADO DE PRODUCTOS (4x5 = 20) -->
+    <section>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?1" alt="Vestido Alba" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Vestido Alba</h3><p class="text-sm text-stone-500">Vestidos · S</p><p class="mt-1">$89</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?2" alt="Blusa Nube" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Blusa Nube</h3><p class="text-sm text-stone-500">Blusas · M</p><p class="mt-1">$52</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?3" alt="Pantalón Lino" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Pantalón Lino</h3><p class="text-sm text-stone-500">Pantalones · L</p><p class="mt-1">$64</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?4" alt="Top Aura" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Top Aura</h3><p class="text-sm text-stone-500">Blusas · XS</p><p class="mt-1">$38</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?5" alt="Vestido Rosa" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Vestido Rosa</h3><p class="text-sm text-stone-500">Vestidos · M</p><p class="mt-1">$92</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?6" alt="Blusa Seda" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Blusa Seda</h3><p class="text-sm text-stone-500">Blusas · S</p><p class="mt-1">$58</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?7" alt="Pantalón Arena" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Pantalón Arena</h3><p class="text-sm text-stone-500">Pantalones · M</p><p class="mt-1">$69</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?8" alt="Falda Brisa" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Falda Brisa</h3><p class="text-sm text-stone-500">Pantalones · S</p><p class="mt-1">$49</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?9" alt="Vestido Cuarzo" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Vestido Cuarzo</h3><p class="text-sm text-stone-500">Vestidos · L</p><p class="mt-1">$95</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?10" alt="Camisa Perla" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Camisa Perla</h3><p class="text-sm text-stone-500">Blusas · XL</p><p class="mt-1">$61</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?11" alt="Pantalón Moca" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Pantalón Moca</h3><p class="text-sm text-stone-500">Pantalones · XL</p><p class="mt-1">$72</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?12" alt="Top Lirio" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Top Lirio</h3><p class="text-sm text-stone-500">Blusas · M</p><p class="mt-1">$41</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?13" alt="Vestido Luz" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Vestido Luz</h3><p class="text-sm text-stone-500">Vestidos · XS</p><p class="mt-1">$87</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?14" alt="Blusa Celeste" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Blusa Celeste</h3><p class="text-sm text-stone-500">Blusas · L</p><p class="mt-1">$55</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?15" alt="Pantalón Duna" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Pantalón Duna</h3><p class="text-sm text-stone-500">Pantalones · S</p><p class="mt-1">$66</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?16" alt="Cardigan Niebla" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Cardigan Niebla</h3><p class="text-sm text-stone-500">Accesorios · M</p><p class="mt-1">$73</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?17" alt="Vestido Marfil" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Vestido Marfil</h3><p class="text-sm text-stone-500">Vestidos · XL</p><p class="mt-1">$99</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?18" alt="Blusa Jade" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Blusa Jade</h3><p class="text-sm text-stone-500">Blusas · XS</p><p class="mt-1">$47</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?19" alt="Pantalón Siena" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Pantalón Siena</h3><p class="text-sm text-stone-500">Pantalones · M</p><p class="mt-1">$68</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+        <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="https://picsum.photos/300?20" alt="Bolso Aura" class="w-full h-52 object-cover rounded-xl mb-3">
+          <h3 class="font-medium">Bolso Aura</h3><p class="text-sm text-stone-500">Accesorios · Única</p><p class="mt-1">$59</p><a href="producto.html" class="text-blush-700 text-sm">Ver producto</a>
+        </article>
+
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- ...existing code... -->
+
+<!-- FOOTER -->
+<footer class="border-t bg-white p-6">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+
+    <div>
+      <h3 class="font-bold mb-2">Categorías</h3>
+      <a href="catalogo.html">Calzado</a><br>
+      <a href="catalogo.html">Camisas</a><br>
+    </div>
+
+    <div>
+      <h3 class="font-bold mb-2">Legal</h3>
+      <p>Términos</p>
+    </div>
+
+    <div>
+      <h3 class="font-bold mb-2">Contacto</h3>
+      <p>hola@lunaatelier.com</p>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
