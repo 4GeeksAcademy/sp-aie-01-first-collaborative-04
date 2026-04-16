@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Catálogo de Luna Atelier con filtros por categoría y talla."
+    />
+    <title>Catálogo | Luna Atelier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blush: {
+                50: "#fff7fa",
+                100: "#ffeef4",
+                200: "#ffd7e6",
+                300: "#f5b9cf",
+                400: "#eb9db7",
+                500: "#df7f9f",
+                700: "#9f4f69"
+              }
+            },
+            boxShadow: {
+              soft: "0 10px 30px -16px rgba(76, 32, 51, 0.25)"
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-blush-50 text-stone-700 antialiased">
+    <!-- ...existing code... -->
+    <header class="border-b border-blush-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center justify-between gap-3 sm:flex-row">
+          <a href="../../index.html" class="text-2xl font-light tracking-[0.2em] text-blush-700">LUNA ATELIER</a>
+          <form class="w-full sm:max-w-md" role="search" aria-label="Buscar productos">
+            <label for="search" class="sr-only">Buscar</label>
+            <div class="relative">
+              <input
+                id="search"
+                type="search"
+                placeholder="Buscar prendas, estilos o categorías"
+                class="w-full rounded-full border border-blush-200 bg-blush-50 px-4 py-2.5 text-sm text-stone-700 placeholder:text-stone-400 focus:border-blush-400 focus:outline-none focus:ring-2 focus:ring-blush-200"
+              />
+              <button
+                type="submit"
+                class="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-full bg-white px-3 py-1.5 text-xs font-medium text-blush-700 shadow-sm transition hover:bg-blush-100"
+              >
+                Buscar
+              </button>
+            </div>
+          </form>
+          <a
+            href="checkout.html"
+            class="rounded-full border border-blush-200 px-4 py-2 text-sm font-medium text-stone-600 transition hover:border-blush-300 hover:text-blush-700"
+          >
+            Mi cuenta
+          </a>
+        </div>
+
+        <nav aria-label="Navegación principal">
+          <ul class="flex flex-wrap items-center justify-center gap-2 text-sm sm:gap-4">
+            <li><a href="../../index.html" class="rounded-full px-4 py-2 text-stone-600 transition hover:bg-blush-100 hover:text-blush-700">Home</a></li>
+            <li><a href="./index.html" class="rounded-full bg-blush-100 px-4 py-2 font-medium text-blush-700">Catalog</a></li>
+            <li><a href="producto.html" class="rounded-full px-4 py-2 text-stone-600 transition hover:bg-blush-100 hover:text-blush-700">Product</a></li>
+            <li><a href="carrito.html" class="rounded-full px-4 py-2 text-stone-600 transition hover:bg-blush-100 hover:text-blush-700">Cart</a></li>
+            <li><a href="checkout.html" class="rounded-full px-4 py-2 text-stone-600 transition hover:bg-blush-100 hover:text-blush-700">Checkout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <section class="mb-8 rounded-3xl bg-white p-6 shadow-soft">
+        <h1 class="mb-6 text-3xl font-semibold text-stone-800">Catálogo</h1>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <div>
+            <label for="categoria" class="mb-2 block text-sm font-medium text-stone-700">Filtro por categoría</label>
+            <select
+              id="categoria"
+              class="w-full rounded-xl border border-blush-200 bg-blush-50 px-4 py-2.5 text-sm focus:border-blush-400 focus:outline-none focus:ring-2 focus:ring-blush-200"
+            >
+              <option>Todas</option>
+              <option>Camisas</option>
+              <option>Pantalones</option>
+              <option>Calzado</option>
+              <option>Accesorios</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="talla" class="mb-2 block text-sm font-medium text-stone-700">Filtro por talla</label>
+            <select
+              id="talla"
+              class="w-full rounded-xl border border-blush-200 bg-blush-50 px-4 py-2.5 text-sm focus:border-blush-400 focus:outline-none focus:ring-2 focus:ring-blush-200"
+            >
+              <option>Todas</option>
+              <option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- 20 productos (4x5 en desktop) -->
+        <!-- ...existing code... -->
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a1/700/900" alt="Producto 1" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Vestido Aura</h3><p class="text-sm text-stone-500">Camisas · M</p><p class="mt-2 text-sm font-semibold text-blush-700">$89.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a2/700/900" alt="Producto 2" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Blusa Brisa</h3><p class="text-sm text-stone-500">Camisas · S</p><p class="mt-2 text-sm font-semibold text-blush-700">$52.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a3/700/900" alt="Producto 3" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Palazzo Serena</h3><p class="text-sm text-stone-500">Pantalones · M</p><p class="mt-2 text-sm font-semibold text-blush-700">$64.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a4/700/900" alt="Producto 4" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Mocasín Nube</h3><p class="text-sm text-stone-500">Calzado · 38</p><p class="mt-2 text-sm font-semibold text-blush-700">$78.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a5/700/900" alt="Producto 5" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Chaqueta Lumi</h3><p class="text-sm text-stone-500">Camisas · L</p><p class="mt-2 text-sm font-semibold text-blush-700">$96.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a6/700/900" alt="Producto 6" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Top Dalia</h3><p class="text-sm text-stone-500">Camisas · XS</p><p class="mt-2 text-sm font-semibold text-blush-700">$38.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a7/700/900" alt="Producto 7" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Jeans Cloud</h3><p class="text-sm text-stone-500">Pantalones · L</p><p class="mt-2 text-sm font-semibold text-blush-700">$68.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a8/700/900" alt="Producto 8" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Sandalia Rose</h3><p class="text-sm text-stone-500">Calzado · 37</p><p class="mt-2 text-sm font-semibold text-blush-700">$59.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a9/700/900" alt="Producto 9" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Bolso Mini</h3><p class="text-sm text-stone-500">Accesorios · Única</p><p class="mt-2 text-sm font-semibold text-blush-700">$72.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a10/700/900" alt="Producto 10" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Camisa Nacar</h3><p class="text-sm text-stone-500">Camisas · M</p><p class="mt-2 text-sm font-semibold text-blush-700">$49.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a11/700/900" alt="Producto 11" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Falda Rose</h3><p class="text-sm text-stone-500">Pantalones · S</p><p class="mt-2 text-sm font-semibold text-blush-700">$58.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a12/700/900" alt="Producto 12" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Sneaker Soft</h3><p class="text-sm text-stone-500">Calzado · 39</p><p class="mt-2 text-sm font-semibold text-blush-700">$82.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a13/700/900" alt="Producto 13" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Aretes Pearl</h3><p class="text-sm text-stone-500">Accesorios · Única</p><p class="mt-2 text-sm font-semibold text-blush-700">$26.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a14/700/900" alt="Producto 14" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Blazer Alba</h3><p class="text-sm text-stone-500">Camisas · XL</p><p class="mt-2 text-sm font-semibold text-blush-700">$110.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a15/700/900" alt="Producto 15" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Pantalón Vela</h3><p class="text-sm text-stone-500">Pantalones · M</p><p class="mt-2 text-sm font-semibold text-blush-700">$62.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a16/700/900" alt="Producto 16" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Tacón Aura</h3><p class="text-sm text-stone-500">Calzado · 36</p><p class="mt-2 text-sm font-semibold text-blush-700">$88.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a17/700/900" alt="Producto 17" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Cinturón Nude</h3><p class="text-sm text-stone-500">Accesorios · Única</p><p class="mt-2 text-sm font-semibold text-blush-700">$24.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a18/700/900" alt="Producto 18" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Camisa Silk</h3><p class="text-sm text-stone-500">Camisas · S</p><p class="mt-2 text-sm font-semibold text-blush-700">$57.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a19/700/900" alt="Producto 19" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Jogger Mist</h3><p class="text-sm text-stone-500">Pantalones · XL</p><p class="mt-2 text-sm font-semibold text-blush-700">$54.00</p></div></article>
+        <article class="overflow-hidden rounded-2xl bg-white shadow-soft"><img src="https://picsum.photos/seed/a20/700/900" alt="Producto 20" class="h-72 w-full object-cover"><div class="p-4"><h3 class="font-medium text-stone-800">Bota Lirio</h3><p class="text-sm text-stone-500">Calzado · 40</p><p class="mt-2 text-sm font-semibold text-blush-700">$99.00</p></div></article>
+      </section>
+    </main>
+
+    <footer class="mt-10 border-t border-blush-200 bg-white">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-3 lg:px-8">
+        <section>
+          <h2 class="mb-3 text-base font-semibold text-stone-800">Categorías</h2>
+          <ul class="space-y-2 text-sm text-stone-600">
+            <li><a href="./index.html" class="hover:text-blush-700">Calzado</a></li>
+            <li><a href="./index.html" class="hover:text-blush-700">Camisas</a></li>
+            <li><a href="./index.html" class="hover:text-blush-700">Pantalones</a></li>
+            <li><a href="./index.html" class="hover:text-blush-700">Accesorios</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="mb-3 text-base font-semibold text-stone-800">Legal</h2>
+          <ul class="space-y-2 text-sm text-stone-600">
+            <li><a href="#" class="hover:text-blush-700">Términos y condiciones</a></li>
+            <li><a href="#" class="hover:text-blush-700">Política de privacidad</a></li>
+            <li><a href="#" class="hover:text-blush-700">Sobre la marca</a></li>
+          </ul>
+        </section>
+        <address class="not-italic">
+          <h2 class="mb-3 text-base font-semibold text-stone-800">Contacto</h2>
+          <ul class="space-y-2 text-sm text-stone-600">
+            <li><a href="mailto:hola@lunaatelier.com" class="hover:text-blush-700">hola@lunaatelier.com</a></li>
+            <li><a href="tel:+34000000000" class="hover:text-blush-700">+34 000 000 000</a></li>
+          </ul>
+        </address>
+      </div>
+      <div class="border-t border-blush-100 py-4 text-center text-xs text-stone-500">
+        © 2026 Luna Atelier. Todos los derechos reservados.
+      </div>
+    </footer>
+  </body>
+</html>
