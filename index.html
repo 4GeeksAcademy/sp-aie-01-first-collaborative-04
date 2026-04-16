@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubre la nueva colección de moda femenina con estilo minimalista, tonos pastel y prendas para cada ocasión."
+    />
+    <title>Luna Atelier | Moda femenina minimalista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blush: {
+                50: "#fff7fa",
+                100: "#ffeef4",
+                200: "#ffd7e6",
+                300: "#f5b9cf",
+                400: "#eb9db7",
+                500: "#df7f9f",
+                700: "#9f4f69"
+              }
+            },
+            boxShadow: {
+              soft: "0 10px 30px -16px rgba(76, 32, 51, 0.25)"
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-blush-50 text-stone-700 antialiased">
+    <header class="border-b border-blush-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center justify-between gap-3 sm:flex-row">
+          <a href="index.html" class="text-2xl font-light tracking-[0.2em] text-blush-700">LUNA ATELIER</a>
+
+          <form class="w-full sm:max-w-md" role="search" aria-label="Buscar productos">
+            <label for="search" class="sr-only">Buscar</label>
+            <div class="relative">
+              <input
+                id="search"
+                type="search"
+                placeholder="Buscar prendas, estilos o categorías"
+                class="w-full rounded-full border border-blush-200 bg-blush-50 px-4 py-2.5 text-sm text-stone-700 placeholder:text-stone-400 focus:border-blush-400 focus:outline-none focus:ring-2 focus:ring-blush-200"
+              />
+              <button
+                type="submit"
+                class="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-full bg-white px-3 py-1.5 text-xs font-medium text-blush-700 shadow-sm transition hover:bg-blush-100"
+              >
+                Buscar
+              </button>
+            </div>
+          </form>
+
+          <a
+            href="checkout.html"
+            class="rounded-full border border-blush-200 px-4 py-2 text-sm font-medium text-stone-600 transition hover:border-blush-300 hover:text-blush-700"
+          >
+            Mi cuenta
+          </a>
+        </div>
+
+        <nav aria-label="Navegación principal">
+          <ul class="flex flex-wrap items-center justify-center gap-2 text-sm sm:gap-4">
+            <li><a href="index.html" class="rounded-full bg-blush-100 px-4 py-2 font-medium text-blush-700">Home</a></li>
+            <li>
+              <a
+                href="catalogo.html"
+                class="rounded-full px-4 py-2 text-stone-600 transition hover:bg-blush-100 hover:text-blush-700"
+                >Catalog</a
+              >
+            </li>
+            <li>
+              <a
+                href="producto.html"
+                class="rounded-full px-4 py-2 text-stone-600 transition hover:bg-blush-100 hover:text-blush-700"
+                >Product</a
+              >
+            </li>
+            <li>
+              <a
+                href="carrito.html"
+                class="rounded-full px-4 py-2 text-stone-600 transition hover:bg-blush-100 hover:text-blush-700"
+                >Cart</a
+              >
+            </li>
+            <li>
+              <a
+                href="checkout.html"
+                class="rounded-full px-4 py-2 text-stone-600 transition hover:bg-blush-100 hover:text-blush-700"
+                >Checkout</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+        <div class="grid overflow-hidden rounded-3xl bg-gradient-to-br from-blush-100 via-white to-blush-50 shadow-soft lg:grid-cols-2">
+          <div class="flex flex-col justify-center px-6 py-10 sm:px-10 lg:px-14">
+            <p class="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-blush-700">Colección 2026</p>
+            <h1 class="text-3xl font-semibold leading-tight text-stone-800 sm:text-4xl lg:text-5xl">
+              Nueva colección primavera
+            </h1>
+            <p class="mt-5 max-w-xl text-sm leading-relaxed text-stone-600 sm:text-base">
+              Descubre siluetas suaves, tejidos ligeros y tonos pastel diseñados para acompañarte con elegancia todos
+              los días.
+            </p>
+            <div class="mt-7">
+              <a
+                href="catalogo.html"
+                class="inline-flex items-center rounded-full bg-blush-700 px-6 py-3 text-sm font-medium text-white transition hover:bg-blush-500"
+              >
+                Comprar ahora
+              </a>
+            </div>
+          </div>
+          <figure class="h-72 lg:h-auto">
+            <img
+              src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=1200&q=80"
+              alt="Modelo con conjunto femenino en tonos pastel para colección primavera"
+              class="h-full w-full object-cover"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 pb-6 sm:px-6 lg:px-8">
+        <div class="mb-5 flex items-center justify-between">
+          <h2 class="text-2xl font-semibold text-stone-800">Nuevos lanzamientos</h2>
+          <a href="catalogo.html" class="text-sm font-medium text-blush-700 hover:text-blush-500">Ver todo</a>
+        </div>
+
+        <div class="flex snap-x gap-4 overflow-x-auto pb-4">
+          <article class="min-w-[240px] max-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=80"
+              alt="Vestido midi rosa claro de manga corta"
+              class="h-72 w-full object-cover"
+            />
+            <div class="space-y-3 p-4">
+              <h3 class="text-base font-medium text-stone-800">Vestido Aura Midi</h3>
+              <p class="text-sm text-stone-500">$89.00</p>
+              <a href="producto.html" class="inline-block text-sm font-medium text-blush-700 hover:text-blush-500">Ver producto</a>
+            </div>
+          </article>
+
+          <article class="min-w-[240px] max-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"
+              alt="Blusa blanca femenina con caída ligera"
+              class="h-72 w-full object-cover"
+            />
+            <div class="space-y-3 p-4">
+              <h3 class="text-base font-medium text-stone-800">Blusa Lino Brisa</h3>
+              <p class="text-sm text-stone-500">$52.00</p>
+              <a href="producto.html" class="inline-block text-sm font-medium text-blush-700 hover:text-blush-500">Ver producto</a>
+            </div>
+          </article>
+
+          <article class="min-w-[240px] max-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=700&q=80"
+              alt="Pantalón palazzo beige de tiro alto"
+              class="h-72 w-full object-cover"
+            />
+            <div class="space-y-3 p-4">
+              <h3 class="text-base font-medium text-stone-800">Palazzo Serena</h3>
+              <p class="text-sm text-stone-500">$64.00</p>
+              <a href="producto.html" class="inline-block text-sm font-medium text-blush-700 hover:text-blush-500">Ver producto</a>
+            </div>
+          </article>
+
+          <article class="min-w-[240px] max-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80"
+              alt="Conjunto femenino en tono marfil con blazer liviano"
+              class="h-72 w-full object-cover"
+            />
+            <div class="space-y-3 p-4">
+              <h3 class="text-base font-medium text-stone-800">Set Alba Soft</h3>
+              <p class="text-sm text-stone-500">$118.00</p>
+              <a href="producto.html" class="inline-block text-sm font-medium text-blush-700 hover:text-blush-500">Ver producto</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+        <div class="mb-5 flex items-center justify-between">
+          <h2 class="text-2xl font-semibold text-stone-800">Más vendidos</h2>
+          <a href="catalogo.html" class="text-sm font-medium text-blush-700 hover:text-blush-500">Ver todo</a>
+        </div>
+
+        <div class="flex snap-x gap-4 overflow-x-auto pb-4">
+          <article class="min-w-[240px] max-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80"
+              alt="Falda plisada rosa pastel para mujer"
+              class="h-72 w-full object-cover"
+            />
+            <div class="space-y-3 p-4">
+              <h3 class="text-base font-medium text-stone-800">Falda Plisada Rose</h3>
+              <p class="text-sm text-stone-500">$58.00</p>
+              <a href="producto.html" class="inline-block text-sm font-medium text-blush-700 hover:text-blush-500">Ver producto</a>
+            </div>
+          </article>
+
+          <article class="min-w-[240px] max-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"
+              alt="Camiseta blanca básica premium para looks urbanos"
+              class="h-72 w-full object-cover"
+            />
+            <div class="space-y-3 p-4">
+              <h3 class="text-base font-medium text-stone-800">Camiseta Base Premium</h3>
+              <p class="text-sm text-stone-500">$34.00</p>
+              <a href="producto.html" class="inline-block text-sm font-medium text-blush-700 hover:text-blush-500">Ver producto</a>
+            </div>
+          </article>
+
+          <article class="min-w-[240px] max-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80"
+              alt="Bolso de hombro minimalista en color crema"
+              class="h-72 w-full object-cover"
+            />
+            <div class="space-y-3 p-4">
+              <h3 class="text-base font-medium text-stone-800">Bolso Nube Mini</h3>
+              <p class="text-sm text-stone-500">$72.00</p>
+              <a href="producto.html" class="inline-block text-sm font-medium text-blush-700 hover:text-blush-500">Ver producto</a>
+            </div>
+          </article>
+
+          <article class="min-w-[240px] max-w-[260px] flex-1 snap-start overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80"
+              alt="Chaqueta ligera femenina en tono pastel rosado"
+              class="h-72 w-full object-cover"
+            />
+            <div class="space-y-3 p-4">
+              <h3 class="text-base font-medium text-stone-800">Chaqueta Lumi</h3>
+              <p class="text-sm text-stone-500">$96.00</p>
+              <a href="producto.html" class="inline-block text-sm font-medium text-blush-700 hover:text-blush-500">Ver producto</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-10 border-t border-blush-200 bg-white">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-3 lg:px-8">
+        <section>
+          <h2 class="mb-3 text-base font-semibold text-stone-800">Categorías</h2>
+          <ul class="space-y-2 text-sm text-stone-600">
+            <li><a href="catalogo.html" class="hover:text-blush-700">Calzado</a></li>
+            <li><a href="catalogo.html" class="hover:text-blush-700">Camisas</a></li>
+            <li><a href="catalogo.html" class="hover:text-blush-700">Pantalones</a></li>
+            <li><a href="catalogo.html" class="hover:text-blush-700">Accesorios</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="mb-3 text-base font-semibold text-stone-800">Legal</h2>
+          <ul class="space-y-2 text-sm text-stone-600">
+            <li><a href="#" class="hover:text-blush-700">Términos y condiciones</a></li>
+            <li><a href="#" class="hover:text-blush-700">Política de privacidad</a></li>
+            <li><a href="#" class="hover:text-blush-700">Sobre la marca</a></li>
+          </ul>
+        </section>
+
+        <address class="not-italic">
+          <h2 class="mb-3 text-base font-semibold text-stone-800">Contacto</h2>
+          <ul class="space-y-2 text-sm text-stone-600">
+            <li><a href="mailto:hola@lunaatelier.com" class="hover:text-blush-700">hola@lunaatelier.com</a></li>
+            <li><a href="tel:+34000000000" class="hover:text-blush-700">+34 000 000 000</a></li>
+            <li>
+              <p>Instagram / Pinterest / TikTok</p>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="border-t border-blush-100 py-4 text-center text-xs text-stone-500">
+        © 2026 Luna Atelier. Todos los derechos reservados.
+      </div>
+    </footer>
+  </body>
+</html>
