@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maison Ros&eacute; | Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-cream: #fff9f5;
+        --accent-primary: #f2c4ce;
+        --accent-secondary: #e8a0bf;
+        --text-charcoal: #2d2d2d;
+        --border-soft: #f0e6e0;
+        --footer-soft: #fdf2f0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--text-charcoal);
+        background-color: var(--bg-cream);
+      }
+
+      .font-display {
+        font-family: "Playfair Display", serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-[var(--bg-cream)] text-[var(--text-charcoal)] antialiased">
+    <header class="sticky top-0 z-30 border-b border-[var(--border-soft)] bg-[var(--bg-cream)]/95 backdrop-blur">
+      <nav class="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-8" aria-label="Primary">
+        <div class="flex flex-wrap items-center gap-3 sm:gap-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+          <a href="index.html" class="font-display text-xl tracking-[0.18em] text-[var(--text-charcoal)] sm:text-2xl">
+            MAISON ROSE
+          </a>
+
+          <form class="order-3 w-full lg:order-none lg:w-[26rem]" role="search" aria-label="Site search">
+            <label for="search-products" class="sr-only">Search products</label>
+            <input
+              id="search-products"
+              type="search"
+              placeholder="Search products..."
+              class="h-11 w-full rounded-full border border-[var(--accent-primary)]/70 bg-white/80 px-5 text-sm text-[var(--text-charcoal)] placeholder:text-[#A98C94] focus:border-[var(--accent-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)]/40"
+            />
+          </form>
+
+          <div class="ml-auto flex items-center gap-2 sm:gap-3 lg:justify-end">
+            <a
+              href="#"
+              aria-label="Account"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-soft)] bg-white text-[var(--text-charcoal)] transition hover:-translate-y-0.5 hover:border-[var(--accent-primary)] hover:shadow-sm"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9ZM9 6.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM12 13.5a8.25 8.25 0 0 0-8.25 8.25.75.75 0 0 0 1.5 0A6.75 6.75 0 0 1 12 15a6.75 6.75 0 0 1 6.75 6.75.75.75 0 0 0 1.5 0A8.25 8.25 0 0 0 12 13.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <a
+              href="cart.html"
+              aria-label="Cart"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-soft)] bg-white text-[var(--text-charcoal)] transition hover:-translate-y-0.5 hover:border-[var(--accent-primary)] hover:shadow-sm"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                <path
+                  d="M6.75 2.25a.75.75 0 0 0 0 1.5h.73l.84 9.07A2.25 2.25 0 0 0 10.56 15h6.88a2.25 2.25 0 0 0 2.24-1.95l.8-6.67a.75.75 0 0 0-.74-.84H9.28l-.1-1.05a2.25 2.25 0 0 0-2.24-2.04h-.19Zm2.72 4.79h9.43l-.69 5.74a.75.75 0 0 1-.75.65h-6.88a.75.75 0 0 1-.75-.65l-.36-3.86-.01-.12-.04-.46Zm1.28 11.96a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm7.5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto w-full max-w-7xl flex-1 px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-1.5 text-sm text-[var(--text-charcoal)]/60">
+          <li><a href="index.html" class="transition hover:text-[var(--accent-secondary)]">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="font-medium text-[var(--text-charcoal)]/80" aria-current="page">Your Cart</li>
+        </ol>
+      </nav>
+
+      <div class="mb-8">
+        <h1 class="font-display text-3xl text-[var(--text-charcoal)] sm:text-4xl">Your Cart</h1>
+        <p class="mt-2 text-sm text-[var(--text-charcoal)]/65">3 items in your bag</p>
+        <p class="mt-2 text-sm text-[var(--text-charcoal)]/60">
+          <a href="catalog.html" class="transition hover:text-[var(--accent-secondary)]">&larr; Continue Shopping</a>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_25rem] lg:items-start">
+        <section aria-label="Cart products" class="space-y-4">
+          <article aria-label="Ros&eacute; Silk Wrap Blouse - cart item" class="relative rounded-xl border border-[var(--border-soft)] bg-white p-4 shadow-[0_8px_24px_rgba(45,45,45,0.05)] sm:p-5">
+            <button
+              type="button"
+              aria-label="Remove Ros&eacute; Silk Wrap Blouse"
+              class="absolute right-3 top-3 text-sm text-[var(--text-charcoal)]/45 transition hover:text-[var(--text-charcoal)]"
+            >
+              &#10005;
+            </button>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-[100px_1fr] lg:grid-cols-[100px_1fr_auto] lg:items-center">
+              <img
+                src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=200&h=240&fit=crop"
+                alt="Ros&eacute; Silk Wrap Blouse"
+                class="h-[120px] w-[100px] rounded-lg object-cover"
+              />
+
+              <div class="pr-0 sm:pr-8 lg:pr-4">
+                <h2 class="text-base font-medium text-[var(--text-charcoal)]">Ros&eacute; Silk Wrap Blouse</h2>
+                <p class="mt-1 text-sm text-[var(--text-charcoal)]/60">Size: M</p>
+                <p class="mt-2 text-base font-semibold text-[var(--accent-secondary)]">&euro;129.00</p>
+              </div>
+
+              <div class="flex items-end justify-between gap-4 lg:flex-col lg:items-end">
+                <div class="inline-flex items-center overflow-hidden rounded-full border border-[var(--border-soft)] bg-white">
+                  <button type="button" aria-label="Decrease quantity" class="inline-flex h-9 w-9 items-center justify-center text-lg text-[var(--text-charcoal)] transition hover:bg-[var(--accent-primary)]/20">-</button>
+                  <input
+                    type="text"
+                    value="1"
+                    readonly
+                    aria-label="Quantity"
+                    class="h-9 w-10 border-x border-[var(--border-soft)] bg-transparent text-center text-xs font-medium text-[var(--text-charcoal)] focus:outline-none"
+                  />
+                  <button type="button" aria-label="Increase quantity" class="inline-flex h-9 w-9 items-center justify-center text-lg text-[var(--text-charcoal)] transition hover:bg-[var(--accent-primary)]/20">+</button>
+                </div>
+                <p class="text-lg font-bold text-[var(--text-charcoal)]">&euro;129.00</p>
+              </div>
+            </div>
+          </article>
+
+          <article aria-label="Camel Wool Overcoat - cart item" class="relative rounded-xl border border-[var(--border-soft)] bg-white p-4 shadow-[0_8px_24px_rgba(45,45,45,0.05)] sm:p-5">
+            <button
+              type="button"
+              aria-label="Remove Camel Wool Overcoat"
+              class="absolute right-3 top-3 text-sm text-[var(--text-charcoal)]/45 transition hover:text-[var(--text-charcoal)]"
+            >
+              &#10005;
+            </button>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-[100px_1fr] lg:grid-cols-[100px_1fr_auto] lg:items-center">
+              <img
+                src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=240&fit=crop"
+                alt="Camel Wool Overcoat"
+                class="h-[120px] w-[100px] rounded-lg object-cover"
+              />
+
+              <div class="pr-0 sm:pr-8 lg:pr-4">
+                <h2 class="text-base font-medium text-[var(--text-charcoal)]">Camel Wool Overcoat</h2>
+                <p class="mt-1 text-sm text-[var(--text-charcoal)]/60">Size: M</p>
+                <p class="mt-2 text-base font-semibold text-[var(--accent-secondary)]">&euro;245.00</p>
+              </div>
+
+              <div class="flex items-end justify-between gap-4 lg:flex-col lg:items-end">
+                <div class="inline-flex items-center overflow-hidden rounded-full border border-[var(--border-soft)] bg-white">
+                  <button type="button" aria-label="Decrease quantity" class="inline-flex h-9 w-9 items-center justify-center text-lg text-[var(--text-charcoal)] transition hover:bg-[var(--accent-primary)]/20">-</button>
+                  <input
+                    type="text"
+                    value="1"
+                    readonly
+                    aria-label="Quantity"
+                    class="h-9 w-10 border-x border-[var(--border-soft)] bg-transparent text-center text-xs font-medium text-[var(--text-charcoal)] focus:outline-none"
+                  />
+                  <button type="button" aria-label="Increase quantity" class="inline-flex h-9 w-9 items-center justify-center text-lg text-[var(--text-charcoal)] transition hover:bg-[var(--accent-primary)]/20">+</button>
+                </div>
+                <p class="text-lg font-bold text-[var(--text-charcoal)]">&euro;245.00</p>
+              </div>
+            </div>
+          </article>
+
+          <article aria-label="Ivory Linen Trousers - cart item" class="relative rounded-xl border border-[var(--border-soft)] bg-white p-4 shadow-[0_8px_24px_rgba(45,45,45,0.05)] sm:p-5">
+            <button
+              type="button"
+              aria-label="Remove Ivory Linen Trousers"
+              class="absolute right-3 top-3 text-sm text-[var(--text-charcoal)]/45 transition hover:text-[var(--text-charcoal)]"
+            >
+              &#10005;
+            </button>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-[100px_1fr] lg:grid-cols-[100px_1fr_auto] lg:items-center">
+              <img
+                src="https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?w=200&h=240&fit=crop"
+                alt="Ivory Linen Trousers"
+                class="h-[120px] w-[100px] rounded-lg object-cover"
+              />
+
+              <div class="pr-0 sm:pr-8 lg:pr-4">
+                <h2 class="text-base font-medium text-[var(--text-charcoal)]">Ivory Linen Trousers</h2>
+                <p class="mt-1 text-sm text-[var(--text-charcoal)]/60">Size: L</p>
+                <p class="mt-2 text-base font-semibold text-[var(--accent-secondary)]">&euro;89.00</p>
+              </div>
+
+              <div class="flex items-end justify-between gap-4 lg:flex-col lg:items-end">
+                <div class="inline-flex items-center overflow-hidden rounded-full border border-[var(--border-soft)] bg-white">
+                  <button type="button" aria-label="Decrease quantity" class="inline-flex h-9 w-9 items-center justify-center text-lg text-[var(--text-charcoal)] transition hover:bg-[var(--accent-primary)]/20">-</button>
+                  <input
+                    type="text"
+                    value="2"
+                    readonly
+                    aria-label="Quantity"
+                    class="h-9 w-10 border-x border-[var(--border-soft)] bg-transparent text-center text-xs font-medium text-[var(--text-charcoal)] focus:outline-none"
+                  />
+                  <button type="button" aria-label="Increase quantity" class="inline-flex h-9 w-9 items-center justify-center text-lg text-[var(--text-charcoal)] transition hover:bg-[var(--accent-primary)]/20">+</button>
+                </div>
+                <p class="text-lg font-bold text-[var(--text-charcoal)]">&euro;178.00</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section aria-label="Order summary" class="rounded-2xl border border-[var(--border-soft)] bg-white p-6 shadow-[0_16px_38px_rgba(45,45,45,0.08)] sm:p-7">
+          <h2 class="font-display text-2xl text-[var(--text-charcoal)]">Order Summary</h2>
+
+          <div class="mt-6 space-y-4 text-sm sm:text-base">
+            <div class="flex items-center justify-between">
+              <span class="text-[var(--text-charcoal)]/75">Subtotal</span>
+              <span class="font-medium text-[var(--text-charcoal)]">&euro;552.00</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-[var(--text-charcoal)]/75">Tax (21%)</span>
+              <span class="font-medium text-[var(--text-charcoal)]">&euro;115.92</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-[var(--text-charcoal)]/75">Shipping</span>
+              <span class="font-medium text-emerald-600">Free</span>
+            </div>
+          </div>
+
+          <div class="mt-6 border-t border-[var(--border-soft)] pt-5">
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-medium text-[var(--text-charcoal)]">Total</span>
+              <span class="text-2xl font-bold text-[var(--text-charcoal)]">&euro;667.92</span>
+            </div>
+          </div>
+
+          <a
+            href="checkout.html"
+            class="mt-7 inline-flex w-full items-center justify-center rounded-full bg-[var(--accent-primary)] px-8 py-3 text-base font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[var(--accent-secondary)] hover:shadow-md"
+          >
+            Purchase
+          </a>
+          <p class="mt-3 text-xs text-[var(--text-charcoal)]/60">Taxes and shipping calculated at checkout</p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="border-t border-[var(--border-soft)] bg-[var(--footer-soft)]">
+      <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8" aria-label="Footer links and information">
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <h2 class="font-display text-lg text-[var(--text-charcoal)]">Categories</h2>
+            <ul class="mt-4 space-y-3 text-sm text-[var(--text-charcoal)]/85">
+              <li><a href="catalog.html" class="transition hover:text-[var(--accent-secondary)]">Footwear</a></li>
+              <li><a href="catalog.html" class="transition hover:text-[var(--accent-secondary)]">Shirts</a></li>
+              <li><a href="catalog.html" class="transition hover:text-[var(--accent-secondary)]">Pants</a></li>
+              <li><a href="catalog.html" class="transition hover:text-[var(--accent-secondary)]">Accessories</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg text-[var(--text-charcoal)]">Legal</h2>
+            <ul class="mt-4 space-y-3 text-sm text-[var(--text-charcoal)]/85">
+              <li><a href="#" class="transition hover:text-[var(--accent-secondary)]">Terms &amp; Conditions</a></li>
+              <li><a href="#" class="transition hover:text-[var(--accent-secondary)]">Privacy Policy</a></li>
+              <li><a href="#" class="transition hover:text-[var(--accent-secondary)]">About the Brand</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg text-[var(--text-charcoal)]">Contact</h2>
+            <ul class="mt-4 space-y-3 text-sm text-[var(--text-charcoal)]/85">
+              <li><a href="mailto:bonjour@maisonrose.com" class="transition hover:text-[var(--accent-secondary)]">bonjour@maisonrose.com</a></li>
+              <li><a href="tel:+33123456789" class="transition hover:text-[var(--accent-secondary)]">+33 1 23 45 67 89</a></li>
+              <li>18 Rue de la Lumiere, Paris, France</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-display text-base tracking-[0.14em] text-[var(--text-charcoal)]">MAISON ROSE</p>
+            <p class="mt-4 max-w-xs text-sm leading-relaxed text-[var(--text-charcoal)]/80">
+              Quiet luxury inspired by Parisian mornings, crafted for timeless feminine silhouettes.
+            </p>
+            <a
+              href="catalog.html"
+              class="mt-6 inline-flex items-center rounded-full bg-[var(--accent-primary)] px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[var(--accent-secondary)] hover:shadow-md"
+            >
+              Explore Collection
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-t border-[var(--border-soft)]">
+        <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-4 text-xs text-[var(--text-charcoal)]/70 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <p>&copy; 2025 Maison Rose</p>
+          <p>All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
