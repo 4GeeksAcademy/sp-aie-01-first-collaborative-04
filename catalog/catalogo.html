@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Catálogo de ropa de Luna Atelier" />
+  <title>Catálogo | Luna Atelier</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Prata&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["Prata", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          },
+          colors: {
+            pearl: {
+              50: "#fffdfa",
+              100: "#f7f1ea",
+              200: "#ece2d5"
+            },
+            espresso: {
+              500: "#5e4a3f",
+              700: "#3a2d26"
+            },
+            gold: {
+              300: "#d5b67e",
+              400: "#bf9a59"
+            }
+          },
+          boxShadow: {
+            soft: "0 20px 45px -26px rgba(28, 20, 16, 0.32)",
+            card: "0 24px 50px -34px rgba(32, 25, 20, 0.45)"
+          },
+          backgroundImage: {
+            "silk-grid": "radial-gradient(circle at 1px 1px, rgba(94,74,63,.11) 1px, transparent 0)"
+          },
+          keyframes: {
+            rise: {
+              "0%": { opacity: "0", transform: "translateY(24px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" }
+            }
+          },
+          animation: {
+            rise: "rise 700ms ease-out both"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-pearl-50 bg-silk-grid [background-size:26px_26px] text-espresso-700 antialiased selection:bg-gold-300 selection:text-white">
+
+<div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+  <div class="absolute -top-44 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-gold-300/20 blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 h-[320px] w-[320px] rounded-full bg-amber-200/25 blur-3xl"></div>
+</div>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 border-b border-pearl-200/70 bg-pearl-50/80 backdrop-blur-lg">
+  <div class="max-w-7xl mx-auto px-4 py-4">
+
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+
+      <!-- LOGO -->
+      <a href="../index.html" class="font-display text-2xl tracking-[0.28em] text-espresso-700">
+        LUNA ATELIER
+      </a>
+
+      <!-- SEARCH -->
+      <div class="relative w-full md:max-w-md">
+        <input type="search" placeholder="Busca por estilo, color o colección"
+          class="w-full rounded-full border border-pearl-200 bg-white/80 px-5 py-2.5 text-sm shadow-soft focus:border-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-300/30">
+      </div>
+
+      <!-- CUENTA -->
+      <a href="../checkout.html" class="rounded-full border border-espresso-500 px-5 py-2 text-sm font-semibold tracking-wide transition hover:bg-espresso-700 hover:text-white">
+        Mi cuenta
+      </a>
+
+    </div>
+
+    <!-- NAV -->
+    <nav class="mt-4">
+      <ul class="flex flex-wrap gap-2 text-sm md:gap-3">
+        <li><a href="../index.html" class="rounded-full px-4 py-2 transition hover:bg-pearl-100">Home</a></li>
+        <li><a href="catalogo.html" class="rounded-full bg-espresso-700 px-4 py-2 font-semibold text-white shadow-soft">Catalog</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="max-w-7xl mx-auto w-full px-4 pt-8 md:pt-12">
+  <div class="overflow-hidden rounded-[2rem] border border-pearl-200 bg-gradient-to-br from-pearl-100 via-white to-amber-50 shadow-soft">
+    <div class="grid gap-6 p-6 md:grid-cols-2 md:items-center md:p-10">
+      <div class="animate-rise">
+        <p class="mb-4 inline-flex rounded-full border border-gold-300/60 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-espresso-500">
+          Edicion Studio 2026
+        </p>
+        <h1 class="font-display text-4xl leading-tight text-espresso-700 md:text-5xl">
+          Elegancia moderna para cada temporada
+        </h1>
+        <p class="mt-4 max-w-xl text-sm text-espresso-500 md:text-base">
+          Siluetas limpias, textiles premium y detalles sutiles para un estilo contemporaneo que se ve refinado de dia y de noche.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#productos" class="rounded-full bg-espresso-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-espresso-500">
+            Ver coleccion
+          </a>
+          <a href="#filtros" class="rounded-full border border-gold-300 px-6 py-3 text-sm font-semibold text-espresso-700 transition hover:bg-gold-300/15">
+            Personalizar busqueda
+          </a>
+        </div>
+      </div>
+      <div class="animate-rise [animation-delay:180ms]">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1280&q=80"
+             alt="Modelo con outfit elegante"
+             class="h-72 w-full rounded-3xl object-cover shadow-card md:h-96">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="max-w-7xl mx-auto w-full px-4 py-10 md:py-14">
+  <div class="flex flex-col gap-6">
+
+    <div>
+      <h2 class="font-display text-3xl text-espresso-700">Catalogo</h2>
+      <p class="mt-2 text-espresso-500">Explora nuestra seleccion de moda femenina con una curaduria atemporal y sofisticada.</p>
+    </div>
+
+    <!-- BARRA DE FILTROS -->
+    <section id="filtros" class="rounded-3xl border border-pearl-200 bg-white/85 p-5 shadow-soft md:p-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+        <div>
+          <label for="categoria" class="mb-2 block text-sm font-semibold text-espresso-500">Categoria</label>
+          <select id="categoria" class="w-full rounded-xl border border-pearl-200 bg-pearl-50 px-3 py-2.5 text-sm focus:border-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-300/30">
+            <option>Todas</option>
+            <option>Vestidos</option>
+            <option>Blusas</option>
+            <option>Pantalones</option>
+            <option>Accesorios</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="talla" class="mb-2 block text-sm font-semibold text-espresso-500">Talla</label>
+          <select id="talla" class="w-full rounded-xl border border-pearl-200 bg-pearl-50 px-3 py-2.5 text-sm focus:border-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-300/30">
+            <option>Todas</option>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+        </div>
+
+        <button class="rounded-xl bg-espresso-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-espresso-500">
+          Aplicar filtros
+        </button>
+      </div>
+    </section>
+
+    <!-- LISTADO DE PRODUCTOS (4x5 = 20) -->
+    <section id="productos">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?elegant,dress,woman" alt="Vestido Alba" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Vestido Alba</h3><p class="text-sm text-espresso-500">Vestidos · S</p><p class="mt-1 font-semibold">$89</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?silk,blouse,woman" alt="Blusa Nube" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Blusa Nube</h3><p class="text-sm text-espresso-500">Blusas · M</p><p class="mt-1 font-semibold">$52</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?linen,trousers,woman" alt="Pantalón Lino" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Pantalón Lino</h3><p class="text-sm text-espresso-500">Pantalones · L</p><p class="mt-1 font-semibold">$64</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?minimal,top,woman" alt="Top Aura" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Top Aura</h3><p class="text-sm text-espresso-500">Blusas · XS</p><p class="mt-1 font-semibold">$38</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?pink,dress,woman" alt="Vestido Rosa" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Vestido Rosa</h3><p class="text-sm text-espresso-500">Vestidos · M</p><p class="mt-1 font-semibold">$92</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?satin,blouse,fashion" alt="Blusa Seda" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Blusa Seda</h3><p class="text-sm text-espresso-500">Blusas · S</p><p class="mt-1 font-semibold">$58</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?beige,pants,woman" alt="Pantalón Arena" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Pantalón Arena</h3><p class="text-sm text-espresso-500">Pantalones · M</p><p class="mt-1 font-semibold">$69</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?skirt,woman,fashion" alt="Falda Brisa" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Falda Brisa</h3><p class="text-sm text-espresso-500">Pantalones · S</p><p class="mt-1 font-semibold">$49</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?long,dress,fashion" alt="Vestido Cuarzo" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Vestido Cuarzo</h3><p class="text-sm text-espresso-500">Vestidos · L</p><p class="mt-1 font-semibold">$95</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?white,shirt,woman" alt="Camisa Perla" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Camisa Perla</h3><p class="text-sm text-espresso-500">Blusas · XL</p><p class="mt-1 font-semibold">$61</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?brown,trousers,fashion" alt="Pantalón Moca" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Pantalón Moca</h3><p class="text-sm text-espresso-500">Pantalones · XL</p><p class="mt-1 font-semibold">$72</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?summer,top,clothing" alt="Top Lirio" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Top Lirio</h3><p class="text-sm text-espresso-500">Blusas · M</p><p class="mt-1 font-semibold">$41</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?white,dress,woman" alt="Vestido Luz" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Vestido Luz</h3><p class="text-sm text-espresso-500">Vestidos · XS</p><p class="mt-1 font-semibold">$87</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?blue,blouse,woman" alt="Blusa Celeste" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Blusa Celeste</h3><p class="text-sm text-espresso-500">Blusas · L</p><p class="mt-1 font-semibold">$55</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?wideleg,pants,woman" alt="Pantalón Duna" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Pantalón Duna</h3><p class="text-sm text-espresso-500">Pantalones · S</p><p class="mt-1 font-semibold">$66</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?cardigan,knitwear,woman" alt="Cardigan Niebla" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Cardigan Niebla</h3><p class="text-sm text-espresso-500">Accesorios · M</p><p class="mt-1 font-semibold">$73</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?ivory,dress,fashion" alt="Vestido Marfil" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Vestido Marfil</h3><p class="text-sm text-espresso-500">Vestidos · XL</p><p class="mt-1 font-semibold">$99</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?green,blouse,woman" alt="Blusa Jade" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Blusa Jade</h3><p class="text-sm text-espresso-500">Blusas · XS</p><p class="mt-1 font-semibold">$47</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?tailored,pants,female" alt="Pantalón Siena" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Pantalón Siena</h3><p class="text-sm text-espresso-500">Pantalones · M</p><p class="mt-1 font-semibold">$68</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border border-pearl-200 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+          <img src="https://source.unsplash.com/700x900/?fashion,handbag,leather" alt="Bolso Aura" class="mb-3 h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+          <h3 class="font-semibold text-espresso-700">Bolso Aura</h3><p class="text-sm text-espresso-500">Accesorios · Unica</p><p class="mt-1 font-semibold">$59</p><a href="producto.html" class="mt-2 inline-block text-sm font-semibold text-espresso-700 underline-offset-4 transition hover:text-gold-400 hover:underline">Ver producto</a>
+        </article>
+
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="mt-auto border-t border-pearl-200 bg-white/95 p-6">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+
+    <div>
+      <h3 class="mb-2 font-semibold text-espresso-700">Categorias</h3>
+      <a href="catalogo.html">Calzado</a><br>
+      <a href="catalogo.html">Camisas</a><br>
+    </div>
+
+    <div>
+      <h3 class="mb-2 font-semibold text-espresso-700">Legal</h3>
+      <p>Términos</p>
+    </div>
+
+    <div>
+      <h3 class="mb-2 font-semibold text-espresso-700">Contacto</h3>
+      <p>hola@lunaatelier.com</p>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
